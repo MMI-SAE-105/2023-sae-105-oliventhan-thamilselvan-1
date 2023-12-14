@@ -1,0 +1,21 @@
+:root{
+    
+    /* Color styles */
+--light-blue: rgba(216, 241, 255, 1);
+--black: rgba(14, 14, 14, 1);
+--light-grey: rgba(234, 234, 234, 1);
+--grey: rgba(88, 88, 88, 1);
+--white: rgba(255, 255, 255, 1);
+
+/* Text-size styles */
+--titre: 28px;
+--heading-1: 24px;
+--heading-2: 16px;
+--heading-3: 14px;
+--button: 12px;
+--header-text: 16px;
+--small--text: 12px;
+--bold-text: 14px;
+--text: 14px;
+
+}
