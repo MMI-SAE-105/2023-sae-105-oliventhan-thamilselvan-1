@@ -32,6 +32,10 @@ Soyez attentifs à l'ordre d'import :
 /* Pages */
 @import "/src/css/pages/contact.css";
 @import "/src/css/pages/architecte.css";
+@import "/src/css/pages/oeuvres.css";
+@import "/src/css/pages/expo.css";
+@import "/src/css/pages/oeuvre.css";
+@import "/src/css/pages/index.css";
 
 /*Layout */
 @import "/src/css/layout/footer.css";

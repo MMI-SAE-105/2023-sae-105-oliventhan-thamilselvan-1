@@ -21,3 +21,19 @@
      height: auto;
      padding-top: 80px;
   }
+
+  .article_title {
+    font-size: var(--heading-1);
+    font-family: var(--font-website);
+    font-weight: 500;
+    color: var(--black);
+    text-align: center;
+  }
+
+  .custom-line {
+    border: none; /* Supprime la bordure par défaut */
+    background-color: black; /* Couleur de fond de la ligne */
+    height: 3px; /* Épaisseur de la ligne */
+    width: 30%; /* Largeur de la ligne en pourcentage de l'élément conteneur */
+    margin: 0 auto; /* Centrage de la ligne */
+  }
