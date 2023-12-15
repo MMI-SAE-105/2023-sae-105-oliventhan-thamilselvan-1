@@ -29,3 +29,7 @@ Soyez attentifs à l'ordre d'import :
 /* Composants */
 
 /* Pages */
+
+/*Layout */
+@import "/src/css/layout/footer.css";
+@import "/src/css/layout/header.css"
