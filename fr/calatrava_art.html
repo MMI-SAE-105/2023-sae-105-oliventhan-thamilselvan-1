@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen:false}" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs%22%3E"></script>
+</head>
+<body>
+    <header class="header container">
+        <div class="header_logo">
+            <h3 class="header_logo-text"> <a class="header_link-logo" href="/fr/index.html">Calatrav-art</a></h3>    
+        </div>
+    <div class="header_fin">
+        <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+        </button> 
+    <!-- Menu principal -->
+        <nav class="header_menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu_list menu__list">
+                <li class="menu_item_main"><a class="menu_link" href="/fr/santiago_calatrava.html">Santiago Calatrava</a></li>
+                <li class="menu_item_main"><a class="menu_link" href="/fr/calatrava_art.html">Calatrav-art</a></li>
+                <li class="menu_item_main"><a class="menu_link" href="/fr/oeuvres.html">Les oeuvres</a></li>
+                <li class="menu_item_secondary"><a class="menu_link" href="/fr/billetterie.html">Billetterie</a></li>
+                <li class="menu_item_secondary"><a class="menu_link" href="/fr/contact.html">Contact</a></li>
+                <li class="menu_item_third"><a class="menu_link" href="/en/calatrava_art.html"><p>EN</p></a></li>
+            </ul>
+        </nav>
+    <!-- Fin du menu principal -->
+    </div>  
+    </header>
+  
+    <main>
+
+    </main>
+
+
+    <footer class="footer">
+        <a class="footer_titre-lien" href="/index.html">
+          <h3 class="footer_titre">Calatrav-art</h3>
+        </a> 
+
+        <nav>
+            <ul class="list_footer">
+                <li><a class="footer_list-item" href="/fr/santiago_calatrava.html">Santiago Calatrava</a></li>
+                <li><a class="footer_list-item" href="/fr/calatrava_art.html">Calatrav-art</a></li>
+                <li><a class="footer_list-item" href="/fr/contact.html">Contact</a></li>
+                <li><a class="footer_list-item" href="https://www.fondationcartier.com/">Fondation Cartier</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h3 class="footer_subheading majuscule" >adresse</h3>
+            <p class="footer_adresse">Fondation Cartier</p>
+            <address class="footer_adresse">261 Bd Raspail<br>75014 Paris</address>
+        </div>
+
+        <div>
+            <h3 class="footer_subheading majuscule">nous suivre</h3>
+            <ul class="footer_list list_footer">
+                <li><a href="https://www.instagram.com/fondationcartier/?hl=fr"><img class="footer_social-icon" src="/public/img/icones/instagram.svg" alt="icone instagram"></a></li>
+                <li><a href="https://twitter.com/Fond_Cartier?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="footer_social-icon" src="/public/img/icones/twitter.svg" alt="icone twitter"></a></li>
+                <li><a href="https://www.facebook.com/FondationCartier/?locale=fr_FR"><img class="footer_social-icon" src="/public/img/icones/facebook.svg" alt="icone facebook"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+  
+</body>
+</html>
