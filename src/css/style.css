@@ -31,6 +31,7 @@ Soyez attentifs à l'ordre d'import :
 
 /* Pages */
 @import "/src/css/pages/contact.css";
+@import "/src/css/pages/architecte.css";
 
 /*Layout */
 @import "/src/css/layout/footer.css";

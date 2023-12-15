@@ -1,0 +1,23 @@
+.image-container {
+    width: 314px; /* Largeur de votre image */
+    height: 402px; /* Hauteur de votre image */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-with-gradient {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* Création d'un masque en dégradé pour le bas de l'image */
+    -webkit-mask-image: linear-gradient(to top, transparent, black);
+    mask-image: linear-gradient(to top, transparent, black);
+  }
+
+  .container_body {
+     width: 100%;
+     height: auto;
+     padding-top: 80px;
+  }
