@@ -43,6 +43,29 @@
           <h1 class="article_title">Le Turning Torso</h1>
           <hr class="custom-line" />
 
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-1.webp" alt="oeuvre 1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-2.webp" alt="oeuvre 2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
 
           <p class="article_text">Un gratte-ciel résidentiel torsadé et l'un des plus hauts bâtiments d'Europe du Nord.</p>
     </main>
