@@ -44,7 +44,36 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Une gare impressionnante connue pour son design en forme d'ailes d'oiseau.</p>
+           
+         
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_7.webp" alt="oeuvre 4.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_8.webp" alt="oeuvre 4.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">L'Oculus, conçu par Santiago Calatrava, est un chef-d'œuvre architectural situé au cœur de New York. Sa forme unique en ailes d'oiseau représente un symbole de liberté et de renaissance suite aux événements du 11 septembre.</p>
+        <p class="article_text">Ce hub de transport combine une fonctionnalité impressionnante avec un design symbolique. L'intérieur spacieux et lumineux crée un environnement accueillant pour des millions de voyageurs, tout en étant un espace commémoratif solennel.</p>
+        <p class="article_text">L'Oculus sert non seulement de gare centrale mais aussi de lieu de rencontre pour les New-Yorkais et les visiteurs. Il incarne l'esprit de résilience et d'unité de la ville, devenant un point de repère incontournable.</p>
+        </div>
     </main>
 
 
