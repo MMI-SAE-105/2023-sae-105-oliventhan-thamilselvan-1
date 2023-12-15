@@ -17,3 +17,14 @@ img {
 .majuscule {
     text-transform: uppercase;
 }
+
+.list_footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: var(--space3x);
+  padding-right: var(--space3x);
+}
