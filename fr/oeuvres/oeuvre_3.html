@@ -44,7 +44,36 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Un pont à haubans avec un pylône incliné unique, construit pour l'Exposition universelle de 1992.</p>
+ 
+         
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_5.webp" alt="oeuvre 3.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_6.webp" alt="oeuvre 3.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">Le Pont de l'Alamillo, conçu pour l'Exposition universelle de 1992, est célèbre pour son design asymétrique et son pylône incliné. Cette structure audacieuse est un exemple éminent du génie de Calatrava en matière de conception de ponts.</p>
+        <p class="article_text">Le pont est une prouesse en matière d'ingénierie, utilisant un système de haubans qui crée un équilibre entre esthétique et fonctionnalité. Sa structure élancée est devenue un point de repère à Séville, admirée pour sa grâce et sa force.</p>
+        <p class="article_text">Au-delà de sa fonction utilitaire, le Pont de l'Alamillo est devenu une attraction touristique majeure, offrant une vue imprenable sur la ville et le fleuve, et symbolisant le renouveau urbain de Séville.</p>
+        </div>
     </main>
 
 

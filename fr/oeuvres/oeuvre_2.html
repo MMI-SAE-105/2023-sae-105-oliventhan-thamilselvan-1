@@ -44,7 +44,35 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Un complexe culturel futuriste comprenant un opéra, un planétarium, un cinéma IMAX et un aquarium.</p>
+         
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_3.webp" alt="oeuvre 2.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_4.webp" alt="oeuvre 2.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">La Cité des Arts et des Sciences est un complexe culturel futuriste à Valence. Conçu pour être un centre de connaissances et de divertissement, il comprend un opéra, un planétarium, un cinéma IMAX et un aquarium.</p>
+        <p class="article_text">L'architecture du complexe, caractérisée par ses formes fluides et futuristes, illustre parfaitement le style unique de Calatrava. Elle combine des éléments de la nature avec une technologie de pointe, créant un paysage urbain captivant.</p>
+        <p class="article_text">Devenu l'un des sites les plus emblématiques de Valence, le complexe attire non seulement les amateurs d'architecture, mais aussi ceux intéressés par la science, l'art et la culture, devenant un symbole de la ville.</p>
+        </div>
     </main>
 
 
