@@ -36,8 +36,102 @@
     </header>
   
     <main>
+        <div class="image-container container_body">
+            <img class="image-with-gradient" src="/public/img/image_head/image-1.webp" alt="Description">
+          </div>
+
+          <h1 class="article_title">Santiago Calatrava</h1>
+          <hr class="custom-line" />
+
+    
+          <div class="paragraphe_padding"><p class="article_text">Santiago Calatrava est renommé pour fusionner l'architecture et la sculpture. Ses œuvres, marquant le paysage urbain, allient esthétique artistique et ingénierie de pointe.</p>
+          <p class="article_text">Calatrava se distingue par sa capacité à intégrer art et ingénierie. Ses créations, telles que le Turning Torso et l'Oculus de New York, sont des exemples de son talent pour créer des espaces fonctionnels et captivants.</p>
+          <p class="article_text">Avec des projets emblématiques mondialement reconnus, Calatrava a marqué l'architecture moderne. Ses réalisations, récompensées et admirées, inspirent innovation et créativité dans le domaine architectural.</p>
+          </div>
+
+          <h3 class="title_sub">Quelques unes de ses oeuvres</h3>
+          <hr class="custom-line_2" />
+
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-1.webp" alt="oeuvre 1">
+                    <figcaption>Le Turning Torso à Malmö
+                        Suède</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-2.webp" alt="oeuvre 2">
+                    <figcaption>La Cité des Arts et des Sciences
+                        Valence, Espagne</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-3.webp" alt="oeuvre 3">
+                    <figcaption>Le Pont de l'Alamillo
+                        Séville, Espagne</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-4" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-4.webp" alt="oeuvre 4">
+                    <figcaption>Le Pont Zubizuri 
+                        Bilbao, Espagne</figcaption>
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+          <h3 class="title_sub">Voici ces oeuvres au cours des années</h3>
+          <hr class="custom-line_2" />
+
+
+          <div class="frise">
+              <div class="img_frise">
+                <div class="date_frise">1992</div>
+                <img  src="/public/img/carroussel/architecte/img-3.webp" alt="oeuvre 3">
+                Le Pont de l'Alamillo
+                        Séville, Espagne
+              </div>
+              <div class="img_frise">
+                <div class="date_frise">1997</div>
+                <img  src="/public/img/carroussel/architecte/img-4.webp" alt="oeuvre 4">
+                Le Pont Zubizuri 
+                        Bilbao, Espagne</div>
+              <div class="img_frise">
+                <div class="date_frise">2005</div>
+                <img  src="/public/img/carroussel/architecte/img-2.webp" alt="oeuvre 2">
+                La Cité des Arts et des Sciences
+                        Valence, Espagne
+                </div>
+              <div class="img_frise">
+                <div class="date_frise">2005</div>
+                <img  src="/public/img/carroussel/architecte/img-1.webp" alt="oeuvre 1">
+                Le Turning Torso à Malmö
+                Suède</div>
+          
+              <div class="fleche_frise">      
+
+              </div>
+              </div>
+
+
 
     </main>
+
 
 
     <footer class="footer">
