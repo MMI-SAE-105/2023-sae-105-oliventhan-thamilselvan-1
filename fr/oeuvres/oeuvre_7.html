@@ -44,7 +44,35 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Connu pour son Quadracci Pavilion avec des ailes mobiles qui s'ouvrent et se ferment.</p>
+               
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_13.webp" alt="oeuvre 7.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_14.webp" alt="oeuvre 7.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">Le Milwaukee Art Museum est célèbre pour son pavillon Quadracci, conçu par Calatrava. Ses ailes mobiles, qui s'ouvrent et se ferment, ne sont pas seulement fonctionnelles mais aussi symboliques, évoquant un oiseau prêt à s'envoler.</p>
+        <p class="article_text">Ce design innovant intègre l'art dans l'architecture, rendant le musée lui-même une pièce maîtresse. Il offre un espace dynamique et interactif, invitant les visiteurs à explorer le lien entre l'art et la structure.</p>
+        <p class="article_text">Au-delà de sa fonction de musée, cette structure est devenue un point de repère culturel à Milwaukee, attirant des visiteurs du monde entier par son architecture unique et son cadre pittoresque au bord du lac Michigan.</p>
+        </div>
     </main>
 
 

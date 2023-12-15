@@ -44,7 +44,35 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Une gare ferroviaire avec un design remarquable, rappelant un oiseau en vol.</p>
+           
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_11.webp" alt="oeuvre 6.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_12.webp" alt="oeuvre 6.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">La Gare de Lyon-Saint-Exupéry TGV, avec son toit rappelant un oiseau en vol, est un exemple remarquable du talent de Calatrava pour fusionner fonctionnalité et esthétisme. Cette gare est un symbole de vitesse et de mouvement.</p>
+        <p class="article_text">En tant que carrefour majeur de transport en France, la gare allie efficacité et beauté, servant des milliers de passagers tout en étant une œuvre d'art architecturale.</p>
+        <p class="article_text">La gare représente l'innovation dans le design des transports publics, offrant une accessibilité et une utilisation optimales, tout en étant un point de repère emblématique dans la région.</p>
+        </div>
     </main>
 
 

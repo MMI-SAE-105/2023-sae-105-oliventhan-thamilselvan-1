@@ -44,7 +44,35 @@
           <hr class="custom-line" />
 
 
-          <p class="article_text">Un pont en verre et en acier moderne traversant le Grand Canal de Venise.</p>
+               
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_15.webp" alt="oeuvre 8.1">
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carrousel_oeuvre/immg_16.webp" alt="oeuvre 8.2">
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div><p class="article_text">Le Pont de la Constitution, traversant le Grand Canal de Venise, est un exemple frappant de l'ajout d'une touche moderne dans un contexte historique. Sa structure en verre et acier offre un contraste audacieux avec l'architecture classique vénitienne.</p>
+        <p class="article_text">Calatrava a conçu ce pont pour allier esthétisme moderne et respect du patrimoine historique de Venise, offrant une nouvelle perspective sur les canaux emblématiques de la ville.</p>
+        <p class="article_text">Ce pont n'est pas seulement une voie de passage ; il est devenu un lieu de rencontre, unissant les deux rives du canal et symbolisant le mélange harmonieux du passé et du présent.</p>
+        </div>
     </main>
 
 
