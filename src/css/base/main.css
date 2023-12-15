@@ -1,0 +1,9 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rotated {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
