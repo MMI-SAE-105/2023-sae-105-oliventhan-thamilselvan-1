@@ -28,3 +28,8 @@ img {
   padding-left: var(--space3x);
   padding-right: var(--space3x);
 }
+
+.noscroll,
+.noscroll body {
+  overflow: hidden;
+}
