@@ -38,6 +38,14 @@
     margin: 0 auto; /* Centrage de la ligne */
   }
 
+  .custom-line_2 {
+    border: none; /* Supprime la bordure par défaut */
+    background-color: black; /* Couleur de fond de la ligne */
+    height: 1px; /* Épaisseur de la ligne */
+    width: 30%; /* Largeur de la ligne en pourcentage de l'élément conteneur */
+    margin: 0 auto; /* Centrage de la ligne */
+  }
+
   .paragraphe_padding {
     padding-top: var(--space3x);
     padding-bottom: var(--space3x);

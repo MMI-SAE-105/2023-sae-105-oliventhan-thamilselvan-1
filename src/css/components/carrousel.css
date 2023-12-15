@@ -46,6 +46,7 @@ max-width width width
       max-width: 500px;
       margin: auto;
       padding-bottom: var(--space3x);
+      margin-top: var(--space3x);
     }
     
     .carrousel_btn {
