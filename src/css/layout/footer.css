@@ -47,3 +47,13 @@
     gap: 2rem;
     display: flex;
 }
+
+.majuscule {
+    text-transform: uppercase;
+}
+
+.list_footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
