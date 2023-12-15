@@ -35,29 +35,28 @@
     </div>  
     </header>
   
-    <main>
-        <section>
-            <h1>Contactez-nous</h1>
-          <form action="#">
+    <main class="container">
+        <h1 class="contact_title">Contactez-nous</h1>
+        <p class="contact_text">Veuillez remplir ce formulaire si vous voulez nous contacter.</p>
+        <form action="#">
             <div >
-                <label for="name">Prénom</label>
-                <input type="text" name="firstname" id="firstname" placeholder="Entrer votre prénom">
+                <label class="contact_form-label" for="name">Prénom</label>
+                <input class="contact_form-input" type="text" name="firstname" id="firstname" placeholder="Entrer votre prénom">
             </div>
             <div >
-              <label for="name">Nom</label>
-              <input type="text" name="name" id="name" placeholder="Entrer votre nom">
+                <label class="contact_form-label" for="name">Nom</label>
+                <input class="contact_form-input" type="text" name="name" id="name" placeholder="Entrer votre nom">
             </div>
             <div>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Entrer votre e-mail">
+                <label class="contact_form-label" for="email">Email</label>
+                <input class="contact_form-input" type="email" name="email" id="email" placeholder="Entrer votre e-mail">
             </div>
             <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="8" placeholder="Entrer votre message"></textarea>
+                <label class="contact_form-label" for="message">Message</label>
+                <textarea class="contact_form-input" id="message" name="message" rows="8" placeholder="Entrer votre message"></textarea>
             </div>
-            <button type="submit">Envoyer</button>
-          </form>
-        </section>
+            <button class="contact_form-button majuscule" type="submit">Envoyer</button>
+        </form>
     </main>
 
 
