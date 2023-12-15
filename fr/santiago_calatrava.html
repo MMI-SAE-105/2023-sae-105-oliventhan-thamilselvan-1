@@ -51,6 +51,56 @@
 
           <h3 class="title_sub">Quelques unes de ses oeuvres</h3>
 
+          <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+                @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+                &lt;
+            </button>
+            <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+                @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+                >
+            </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-1.webp" alt="oeuvre 1">
+                    <figcaption>Le Turning Torso à Malmö
+                        Suède</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-2.webp" alt="oeuvre 2">
+                    <figcaption>La Cité des Arts et des Sciences
+                        Valence, Espagne</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-3.webp" alt="oeuvre 3">
+                    <figcaption>Le Pont de l'Alamillo
+                        Séville, Espagne</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-4" class="carrousel_ecran">
+                <figure>
+                    <img class="carrousel_ecran_img" src="/public/img/carroussel/architecte/img-4.webp" alt="oeuvre 4">
+                    <figcaption>Le Pont Zubizuri 
+                        Bilbao, Espagne</figcaption>
+                </figure>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+          <h3 class="title_sub">Voici ces oeuvres au cours des années</h3>
+
+
+          
+
+
+
 
     </main>
 
