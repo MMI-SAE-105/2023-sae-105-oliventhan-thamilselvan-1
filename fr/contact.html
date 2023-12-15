@@ -19,8 +19,12 @@
     <div>
         <img src="" alt="">
     </div>
-    <div>
-        <button></button> 
+    <div class="header_fin">
+        <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+                <span class="menu-btn_bar"></span>
+        </button> 
     <!-- Menu principal -->
         <nav>
             <ul>
